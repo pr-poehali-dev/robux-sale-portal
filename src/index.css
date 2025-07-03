@@ -1,9 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
+    --robux-purple: #8b5cf6;
+    --robux-orange: #f97316;
+    --robux-dark: #1a1f2c;
+    --robux-light: #d6bcfa;
+    --robux-green: #10b981;
+    --robux-gray: #8e9196;
+
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -97,5 +106,23 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Rubik", sans-serif;
+  }
+
+  .robux-gradient {
+    background: linear-gradient(135deg, var(--robux-dark) 0%, #2d1b69 100%);
+  }
+
+  .robux-card {
+    background: linear-gradient(
+      135deg,
+      rgba(139, 92, 246, 0.1) 0%,
+      rgba(249, 115, 22, 0.1) 100%
+    );
+    border: 1px solid rgba(139, 92, 246, 0.2);
+  }
+
+  .robux-glow {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
   }
 }
